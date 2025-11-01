@@ -1,0 +1,132 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #a48d78;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+.navbar a {
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    background-color: #d5cdbf;
+}
+
+
+#search-bar {
+    display: flex;
+    align-items: center;       /* i vendos ne mes*/
+    justify-content: flex-start; 
+    height: 65px;
+    background-color: rgb(244, 244, 244);
+    padding: 0 20px;           /* hapsira anash */
+    gap: 15px;                  /* hapsira ne mes logos dhe formes */
+}
+
+#search-bar img {
+    height: 60px;               
+    width: auto;
+    padding-bottom: 5px;
+    padding-top: 5px ;
+    border-radius: 50px;
+}
+
+#search-bar form {
+    display: flex;
+    flex: 1;                    /* merr krejt hapsiren e mbetur*/
+}
+
+#inputsearch {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+}
+
+#searchbtn {
+    padding: 8px 15px;
+    border: none;
+    background-color: #a48d78;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+#searchbtn:hover {
+    background-color: #d5cdbf;
+}
+
+
+.container {
+    display: flex;
+    align-items: center;   /* vendos elementet vertikalisht ne mes */
+    justify-content: center; 
+    gap: 20px;             
+    background-color: #f4f1ea;
+    padding: 20px;
+    flex-wrap: wrap;       /* behet responsive ne mobile */
+}
+
+.background {
+    width: 50%;
+    max-width: 500px;
+    height: 350px;
+    object-fit: cover;
+}
+
+.qoutes {
+    width: 50%;
+    max-width: 500px;
+    padding-bottom: 30px;
+    font-size: 50px;
+    color: #5a4635;
+    font-style: italic;
+}
+
+/* BUTTON */
+.button-link {
+    background-color: #a48d78;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.button-link:hover {
+    background-color: #d5cdbf;
+}
+
+@media (max-width: 768px) {
+    .background, .qoutes {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        font-size: 32px;
+    }
+    
+    #search-bar img {
+        height: 35px;
+    }
+
+    #inputsearch, #searchbtn {
+        font-size: 14px;
+    }
+}
