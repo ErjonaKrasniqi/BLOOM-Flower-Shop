@@ -1,0 +1,142 @@
+<html>
+	<head>
+		<title>Register</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="createaccount.css" />
+	</head>
+
+	<body class="auth-page">
+		<!-- Background Overlay -->
+		<div class="auth-background"></div>
+
+		<!-- Register Modal -->
+		<div class="auth-modal-container">
+			<div class="auth-modal">
+				<!-- Close Button -->
+				<a href="home.html" class="modal-close">
+					<svg
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+					>
+						<line x1="18" y1="6" x2="6" y2="18"></line>
+						<line x1="6" y1="6" x2="18" y2="18"></line>
+					</svg>
+				</a>
+
+				<!-- Modal Header -->
+				<div class="auth-header">
+					<h1>Create Account</h1>
+				</div>
+
+				<!-- Register Form -->
+				<form class="auth-form" onsubmit="return false;">
+					<div class="form-row">
+						<div class="form-group">
+							<label for="name">First Name</label>
+							<input
+								id="name"
+								type="text"
+								name="name"
+								placeholder="Enter your first name"
+								required
+								class="form-input"
+							/>
+						</div>
+						<div class="form-group">
+							<label for="surname">Last Name</label>
+							<input
+								id="surname"
+								type="text"
+								name="surname"
+								placeholder="Enter your last name"
+								required
+								class="form-input"
+							/>
+						</div>
+					</div>
+
+					<div class="form-row">
+						<div class="form-group">
+							<label for="email">Email Address</label>
+							<input
+								id="email"
+								type="email"
+								name="email"
+								placeholder="Enter your email"
+								required
+								class="form-input"
+							/>
+						</div>
+						<div class="form-group">
+							<label for="location">Location</label>
+							<input
+								id="location"
+								type="text"
+								name="location"
+								class="form-input"
+							/>
+						</div>
+					</div>
+
+					<div class="form-row">
+						
+						<div class="form-group">
+							<label for="password">Password</label>
+							<input
+								id="password"
+								type="password"
+								name="password"
+								placeholder="Create a password"
+								required
+								class="form-input"
+							/>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="confirmPassword">Confirm Password</label>
+						<input
+							id="confirmPassword"
+							type="password"
+							name="confirmPassword"
+							placeholder="Confirm your password"
+							required
+							class="form-input"
+						/>
+					</div>
+
+					<div class="form-options">
+						<label class="checkbox-label">
+							<input type="checkbox" required />
+							<span
+								>I agree to the
+								<a href="#" class="auth-link">Terms & Conditions</a></span
+							>
+						</label>
+					</div>
+
+					<button type="submit" class="auth-button" onclick="ruajRegister()">
+						Create Account
+					</button>
+
+					<div class="auth-divider">
+						<span>or</span>
+					</div>
+
+					<div class="auth-footer">
+						<p>
+							Already have an account?
+							<a href="login.html" class="auth-link">Sign in</a>
+						</p>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="data.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+</html>
