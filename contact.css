@@ -6,68 +6,124 @@ body.contactus-container {
     padding: 0;
 }
 
+/* Navbar */
 .navbar {
   display: flex;
   align-items: center;
-  background-color: #ccbfa3;
+  background-color: #cbd9e6;
   padding: 18px 20px;
   box-shadow: 0 3px 12px rgba(0,0,0,0.18);
 }
+
 .nav-links {
   display: flex;
   gap: 35px;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
+
 .nav-links a {
   color: white;
-  font-style: italic;
   font-size: 18px;
   text-decoration: none;
   padding: 10px 18px;
   border-radius: 8px;
   transition: 0.3s ease;
 }
+
 .nav-links a:hover {
-  background-color: #e9dfd2;
+  background-color: #b6b5c5;
   color: #3d2e22;
   transform: translateY(-3px);
 }
+
 .sign-in-btn {
-  background-color: #b79a7d;
+  background-color: #8696b4;
   color: white;
-  font-weight: bold;
   padding: 10px 20px;
   border-radius: 8px;
   text-decoration: none;
-  transition: background 0.3s, transform 0.3s;
+  transition: 0.3s ease;
 }
+
 .sign-in-btn:hover {
-  background-color: #e9dfd2;
+  background-color: #fadad9;
   transform: translateY(-3px);
 }
+
 /* Contact Card */
 .contactus {
     background-color: #fff7f0;
     padding: 60px;
     border-radius: 30px;
-    box-shadow: 0 15px 35px rgba(255,105,135,0.35);
+    box-shadow: 0 15px 35px #adc9eb;
     display: flex;
     gap: 60px;
     flex-wrap: wrap;
     max-width: 1100px;
     width: 95%;
-    margin: 50px auto; /* Centron kartën */
+    margin: 50px auto;
 }
 
 /* Contact Info */
-.contacts {
-    flex: 1;
-    min-width: 320px;
-}
-
 .contacts p {
     margin: 14px 0;
     font-size: 20px;
     color: #6b4c3b;
     font-weight: 600;
+}
+
+/* SOCIAL ICONS — fixed, equal size */
+.social-list {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+    margin-top: 20px;
+    padding: 0;
+}
+
+.social-list img {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    object-fit: cover;   /* ruan formën edhe kur fotot s’janë të sakta */
+    transition: 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+}
+
+.social-list img:hover {
+    transform: scale(1.15);
+}
+
+/* Contact Form */
+.contact-form .help {
+    font-size: 20px;
+    color: #6b4c3b;
+    font-weight: bold;
+}
+
+.contactus-input {
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 2px solid #d7c0aa;
+    outline: none;
+    background-color: white;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.contactus-input:focus {
+    border-color: #a58f79;
+}
+
+.submit {
+    background-color: #c59b7a;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: #a67d5a;
 }
