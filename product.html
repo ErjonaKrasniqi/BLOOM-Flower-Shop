@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fdf6f0;
+      color: #5a4635;
+      margin: 0;
+      padding: 0;
+    }
+
+    .product-container {
+      max-width: 700px;
+      margin: 50px auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      padding: 0 20px;
+    }
+
+    .product-img {
+      flex: 1;
+    }
+
+    .product-img img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .product-info {
+      flex: 1;
+    }
+
+    .product-info h1 {
+      margin-top: 0;
+    }
+
+    .price {
+      font-size: 24px;
+      color: #e74c3c;
+      margin: 15px 0;
+    }
+
+    select {
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin: 10px 0;
+    }
+
+    .order-btn {
+      padding: 12px 20px;
+      background-color: #5a4635;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .order-btn:hover {
+      background-color: #7b5e4c;
+    }
+
+  </style>
+</head>
+<body> 
+
+  <div class="product-container">
+    <div class="product-img">
+      <img id="productImage" src="" alt="Product">
+    </div>
+    <div class="product-info">
+      <h1 id="productName"></h1>
+      <p id="productDesc"></p>
+      <div class="price" id="productPrice"></div>
+
+      <label for="sizeSelect">Choose size:</label>
+      <select id="sizeSelect">
+        <option value="small">Small</option>
+        <option value="medium">Medium (+$10)</option>
+        <option value="large">Large (+$20)</option>
+      </select>
+
+      <button class="order-btn" onclick="orderProduct()">Order Now</button>
+    </div>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get('name');
+    const img = urlParams.get('img');
+    const price = parseFloat(urlParams.get('price'));
+   const productDescriptions = {
+  "Daffodil": "Fresh Daffodil bouquet, handpicked with care.",
+  "Tulip": "Bright and colorful Tulip bouquet, perfect for spring.",
+  "Red Roses": "Classic Red Roses, symbol of love and passion.",
+  "Dahlia": "Elegant Dahlia bouquet, hand-arranged for special occasions.",
+  "Daisy": "Cheerful Daisy bouquet, ideal for gifting or decorating.",
+  "Sunflower": "Sunny Sunflower bouquet, brings happiness and warmth.",
+  "Orchid": "Exotic Orchid bouquet, luxurious and long-lasting.",
+  "Lily": "Fragrant Lily bouquet, elegant and timeless.",
+  "Hydrangea": "Beautiful Hydrangea bouquet, soft and romantic.",
+  "Freesia": "Delicate Freesia bouquet, sweet and fragrant.",
+  "Dandelion": "Bright Dandelion bouquet, cheerful and sunny.",
+  "DontForgetMeNot": "Delicate bouquet of Forget-Me-Nots, a symbol of remembrance.",
+  "Gardenia": "Elegant Gardenia bouquet, fragrant and luxurious.",
+  "Hibiscus": "Tropical Hibiscus bouquet, vibrant and eye-catching.",
+  "Hyacinth": "Fragrant Hyacinth bouquet, colorful and fresh.",
+  "Jasmine": "Sweet Jasmine bouquet, aromatic and elegant.",
+  "Lavender": "Calming Lavender bouquet, perfect for relaxation.",
+  "Magnolia": "Beautiful Magnolia bouquet, soft and sophisticated.",
+  "Poppy": "Bright Poppy bouquet, lively and cheerful.",
+  "Ranunculus": "Elegant Ranunculus bouquet, delicate and colorful.",
+  "Spider Lily": "Unique Spider Lily bouquet, exotic and striking.",
+  "Blue Peony": "Lush Blue Peony bouquet, romantic and charming.",
+  "Pink Roses": "Lovely Pink Roses bouquet, perfect for any occasion.",
+  "Red Orchid": "Exquisite Red Orchid bouquet, luxurious and elegant."
+};
+    document.getElementById('productName').textContent = name;
+    document.getElementById('productImage').src = img;
+    document.getElementById('productDesc').textContent = productDescriptions[name] || "Beautiful fresh bouquet, handpicked and arranged with care.";
+    document.getElementById('productPrice').textContent = '$' + price.toFixed(2);
+
+    const sizeSelect = document.getElementById('sizeSelect');
+    const productPriceEl = document.getElementById('productPrice');
+
+    sizeSelect.addEventListener('change', () => {
+      let selectedSize = sizeSelect.value;
+      let updatedPrice = price;
+
+      if(selectedSize === "medium") updatedPrice += 10;
+      else if(selectedSize === "large") updatedPrice += 20;
+
+      productPriceEl.textContent = '$' + updatedPrice.toFixed(2);
+    });
+
+    function orderProduct() {
+      const size = sizeSelect.value;
+      let finalPrice = price;
+
+      if(size === "medium") finalPrice += 10;
+      else if(size === "large") finalPrice += 20;
+
+      alert(`You have added ${name} (${size}) to your order!\nTotal Price: $${finalPrice.toFixed(2)}`);
+    }
+  </script>
+
+</body>
+</html>
