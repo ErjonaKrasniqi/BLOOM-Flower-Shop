@@ -1,367 +1,252 @@
 <!DOCTYPE html>
 <html lang="sq">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bouquets Shop — Fresh Handmade Bouquets</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="bouquets.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bouquets Shop</title>
+  <link rel="stylesheet" href="../css/bouquets.css">
 </head>
 <body>
+    <header class="navbar">
+        <div class="nav-links">
+            <a href="home.html" >Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="bouquets.html" class="active">Bouquets</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <a href="createaccount.html" class="sign-in-btn">Create Account</a>
+    </header>
+<div class="bouquet-layout">
+<div class="filter-choose-inline">
+  <div class="filter-inline">
+    <span class="filter-title">Price:</span>
+    <span id="minPriceLabel">$10</span>
+    <input type="range" id="priceRange" min="10" max="200" value="200">
+    <span id="maxPriceLabel">$200</span>
+    <button id="applyPriceFilter" class="apply-btn">Apply</button>
+  </div>
 
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="nav-inner">
-      <a class="brand" href="home.html"><h1>Bouquets</h1></a>
-      <nav class="nav-links">
-        <a href="home.html">Home</a>
-        <a href="#AboutUs">About Us</a>
-        <a href="bouquets.html">Bouquets</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <a href="createaccount.html" class="sign-in-btn">Create Account</a>
+  <form id="flowerFilterForm" class="choose-inline">
+    <span class="filter-title">Choose Flower:</span>
+    <label><input type="checkbox" name="flowers" value="Roses">Roses</label>
+    <label><input type="checkbox" name="flowers" value="Tulip">Tulip</label>
+    <label><input type="checkbox" name="flowers" value="Orchid">Orchid</label>
+    <label><input type="checkbox" name="flowers" value="Lily">Lily</label>
+    <button type="submit" class="apply-btn">Filter</button>
+    <span>OR</span>
+    <a href="createbouquets.html" class="create-btn">Create Bouquet</a>
+  </form>
+</div>
+
+</div>
+<div class="row-deals-video">
+  <div class="hottest-deals">
+    <h3>Hottest Deals</h3>
+    <div class="deal-card">
+      <img src="../picsForBouquets/Anthurium.jpg" alt="Anthurium">
+      <div class="deal-info">
+        <p>EVENING 12</p>
+        <span class="oldp">$39.99</span>
+        <span class="newp">$29.99</span>
+      </div>
+      <span class="sale-badge">Sale</span>
     </div>
-  
-  </header>
 
+    <div class="deal-card">
+      <img src="../picsForBouquets/Bluebell.jpg" alt="Bluebell">
+      <div class="deal-info">
+        <p>Elegant Roses</p>
+        <span class="oldp">$30.99</span>
+        <span class="newp">$22.50</span>
+      </div>
+      <span class="sale-badge">Sale</span>
+    </div>
+  </div>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-card">
-      <img class="hero-slide" src="picsForBouquets/bouquets1.jpg" alt="Best for you">
-      <img class="hero-slide" src="picsForBouquets/bouquets2.jpg" alt="Tulip">
-      <img class="hero-slide" src="picsForBouquets/bouquets3.jpg" alt="Forget Me Not">
-      <img class="hero-slide" src="picsForBouquets/bouquets4.jpg" alt="Forget Me Not">
-      <div class="hero-overlay">
-        <h2 class="hero-title">Fresh Handmade Bouquets</h2>
-        <p class="hero-sub">Hand-picked, artfully wrapped — delivered with love.</p>
+  <div class="video-section">
+    <video controls muted autoplay >
+      <source src="../media/flower1.mp4" type="video/mp4">
+      <track src="../media/captions.vtt" kind="subtitles" srclang="en" label="English" kind="captions">
+    </video>
+     <div class="audio">
+      <audio controls autoplay loop>
+      <source src="../media/myAudio.mp3" type="audio/mpeg">
+      </audio>
+     </div>
+  </div>
+</div>
+  <section class="products">
+    <h4 class="section-title">OUR BOUQUETS</h4>
+    <div class="product-grid">
+
+      <div class="product-card">
+        <img src="../picsForBouquets/Daffodil.jpg" alt="Daffodil">
+        <h3>Daffodil</h3>
+        <span class="price">$29.99</span>
+<a href="product.html?name=Daffodil&price=29.99&img=../picsForBouquets/Daffodil.jpg" class="view-btn">View Details</a>
+      </div>
+
+      <div class="product-card">
+        <img src="../picsForBouquets/tulip.jpg" alt="Spring Tulips">
+        <h3>Spring Tulips</h3>
+        <span class="price">$24.99</span>
+        <a href="product.html?name=Spring Tulips&price=24.99&img=../picsForBouquets/tulip.jpg" class="view-btn">View Details</a>
+      </div>
+
+      <div class="product-card">
+        <img src="../picsForBouquets/Dahlia.jpg" alt="Dahlia">
+        <h3>Dahlia</h3>
+        <span class="price">$22.99</span>
+        <a href="product.html?name=Dahlia&price=22.99&img=../picsForBouquets/Dahlia.jpg" class="view-btn">View Details</a>
+      </div>
+
+      <div class="product-card">
+        <img src="../picsForBouquets/daisy.jpg" alt="Daisy">
+        <h3>Daisy</h3>
+        <span class="price">$87.99</span>
+        <a href="product.html?name=Daisy&price=87.99&img=../picsForBouquets/daisy.jpg" class="view-btn">View Details</a>
+      </div>
+
+      <div class="product-card">
+        <img src="../picsForBouquets/Dandelion.jpg" alt="Dandelion">
+        <h3>Dandelion</h3>
+        <span class="price">$78.99</span>
+        <a href="product.html?name=Dandelion&price=78.99&img=../picsForBouquets/Dandelion.jpg" class="view-btn">View Details</a>
+      </div>
+
+      <div class="product-card">
+        <img src="../picsForBouquets/Forget-Me-Not.jpg" alt="DontForgetMeNot">
+        <h3>DontForgetMeNot</h3>
+        <span class="price">$23.99</span>
+        <a href="product.html?name=DontForgetMeNot&price=23.99&img=../picsForBouquets/Forget-Me-Not.jpg" class="view-btn">View Details</a>
+      </div>
+
+      <div class="product-card">
+        <img src="../picsForBouquets/Freesia.jpg" alt="Freesia">
+        <h3>Freesia</h3>
+        <span class="price">$45.99</span>
+        <a href="product.html?name=Freesia&price=45.99&img=../picsForBouquets/Freesia.jpg" class="view-btn">View Details</a>
+      </div>
+
+      <div class="product-card">
+        <img src="../picsForBouquets/Gardenia.jpg" alt="Gardenia">
+        <h3>Gardenia</h3>
+        <span class="price">$33.99</span>
+        <a href="product.html?name=Gardenia&price=33.99&img=../picsForBouquets/Gardenia.jpg" class="view-btn">View Details</a>
+      </div>
+
+      <div class="product-card">
+        <img src="../picsForBouquets/Hibiscus.jpg" alt="Hibiscus">
+        <h3>Hibiscus</h3>
+        <span class="price">$30.99</span>
+        <a href="product.html?name=Hibiscus&price=30.99&img=../picsForBouquets/Hibiscus.jpg" class="view-btn">View Details</a>
+      </div>
+
+      <div class="product-card">
+        <img src="../picsForBouquets/Hyacinth.jpg" alt="Hyacinth">
+        <h3>Hyacinth</h3>
+        <span class="price">$10.99</span>
+        <a href="product.html?name=Hyacinth&price=10.99&img=../picsForBouquets/Hyacinth.jpg" class="view-btn">View Details</a>
+      </div>
+
+      <div class="product-card">
+        <img src="../picsForBouquets/hydrangea.jpg" alt="Hydrangea">
+        <h3>Hydrangea</h3>
+        <span class="price">$10.99</span>
+        <a href="product.html?name=Hydrangea&price=10.99&img=../picsForBouquets/hydrangea.jpg" class="view-btn">View Details</a>
+      </div>
+      <div class="product-card">
+        <img src="../picsForBouquets/jasmine.jpg" alt="Jasmine">
+        <h3>Jasmine</h3>
+        <span class="price">$10.99</span>
+        <a href="product.html?name=Jasmine&price=10.99&img=../picsForBouquets/jasmine.jpg" class="view-btn">View Details</a>
+      </div>
+
+      <div class="product-card">
+        <img src="../picsForBouquets/lavender.jpg" alt="Lavender">
+        <h3>Lavender</h3>
+        <span class="price">$20.99</span>
+        <a href="product.html?name=Lavender&price=20.99&img=../picsForBouquets/lavender.jpg" class="view-btn">View Details</a>
+      </div>
+      <div class="product-card">
+        <img src="../picsForBouquets/lily.jpg" alt="Lily">
+        <h3>Lily</h3>
+        <span class="price">$110.99</span>
+        <a href="product.html?name=Lily&price=110.99&img=../picsForBouquets/lily.jpg" class="view-btn">View Details</a>
+      </div>
+
+      <div class="product-card">
+        <img src="../picsForBouquets/magnolia.jpg" alt="Magnolia">
+        <h3>Magnolia</h3>
+        <span class="price">$145.99</span>
+        <a href="product.html?name=Magnolia&price=145.99&img=../picsForBouquets/magnolia.jpg" class="view-btn">View Details</a>
+      </div>
+      <div class="product-card">
+        <img src="../picsForBouquets/orchid.jpg" alt="Orchid">
+        <h3>Orchid</h3>
+        <span class="price">$118.99</span>
+        <a href="product.html?name=Orchid&price=118.99&img=../picsForBouquets/orchid.jpg" class="view-btn">View Details</a>
+      </div>
+
+      <div class="product-card">
+        <img src="../picsForBouquets/Poppy.jpg" alt="Poppy">
+        <h3>Poppy</h3>
+        <span class="price">$56.99</span>
+        <a href="product.html?name=Poppy&price=56.99&img=../picsForBouquets/Poppy.jpg" class="view-btn">View Details</a>
+      </div>
+
+      <div class="product-card">
+        <img src="../picsForBouquets/Ranunculus.jpg" alt="Ranunculus">
+        <h3>Ranunculus</h3>
+        <span class="price">$90.99</span>
+        <a href="product.html?name=Ranunculus&price=90.99&img=../picsForBouquets/Ranunculus.jpg" class="view-btn">View Details</a>
+      </div>
+      <div class="product-card">
+        <img src="../picsForBouquets/Red Roses.jpg" alt="Red Roses">
+        <h3>Red Roses</h3>
+        <span class="price">$140.99</span>
+        <a href="product.html?name=Red Roses&price=140.99&img=../picsForBouquets/Red Roses.jpg" class="view-btn">View Details</a>
+      </div>
+
+      <div class="product-card">
+        <img src="../picsForBouquets/Spider Liliy.jpg" alt="Spider Lily">
+        <h3>Spider Lily</h3>
+        <span class="price">$47.99</span>
+        <a href="product.html?name=Spider Lily&price=47.99&img=../picsForBouquets/Spider Liliy.jpg" class="view-btn">View Details</a>
+      </div>
+
+      <div class="product-card">
+        <img src="../picsForBouquets/sunflower.jpg" alt="Sun Flower">
+        <h3>Sun Flower</h3>
+        <span class="price">$40.99</span>
+        <a href="product.html?name=Sun Flower&price=40.99&img=../picsForBouquets/sunflower.jpg" class="view-btn">View Details</a>
+      </div>
+
+      <div class="product-card">
+        <img src="../pic/bluepeony.jpg" alt="Blue Peony">
+        <h3>Blue Peony</h3>
+        <span class="price">$37.99</span>
+            <a href="product.html?name=Blue Peony&price=37.99&img=../pic/bluepeony.jpg" class="view-btn">View Details</a>
+      </div>
+
+      <div class="product-card">
+        <img src="../pic/pinkroses.jpg" alt="pink roses">
+        <h3>Pink Roses</h3>
+        <span class="price">$29.99</span>
+        <a href="product.html?name=Pink Roses&price=29.99&img=../pic/pinkroses.jpg" class="view-btn">View Details</a>
+      </div>
+
+      <div class="product-card">
+        <img src="../pic/redorchid.jpg" alt="Red Orchid">
+        <h3>Red Orchid</h3>
+        <span class="price">$40.99</span>
+        <a href="product.html?name=Red%20Orchid&price=40.99&img=../pic/redorchid.jpg" class="view-btn">View Details</a>
       </div>
     </div>
   </section>
-
-  <!-- MAIN LAYOUT -->
-  <main class="container">
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <h3>Filter by price</h3>
-      <div class="price-filter">
-        <input id="priceRange" type="range" min="10" max="200" value="200" />
-        <div class="price-values muted"><span>$10 - </span><strong id="maxPriceLabel">$200</strong></div>
-        <button id="applyPriceFilter">Apply</button>
-      </div>
-
-      <h3>Hottest Deals</h3>
-      <div class="deal-card">
-        <img src="picsForBouquets/Anthurium.jpg" alt="Anthurium">
-        <div class="deal-info">
-          <p>EVENING 12</p>
-          <div><span class="oldp">$39.99</span><span class="newp">$29.99</span></div>
-        </div>
-      </div>
-
-      <div class="deal-card">
-        <img src="picsForBouquets/Bluebell.jpg" alt="Bluebell">
-        <div class="deal-info">
-          <p>Elegant Roses</p>
-          <div><span class="oldp">$30.99</span><span class="newp">$22.50</span></div>
-        </div>
-      </div>
-
-      <!-- FORM për krijimin e buqetës -->
-      <h3>Krijo Buqetën tënde</h3>
-      <form id="flowerFilterForm" class="bouquet-form">
-        <label><input type="checkbox" name="flowers" value="Roses"> Roses</label>
-        <label><input type="checkbox" name="flowers" value="Tulip"> Tulip</label>
-        <label><input type="checkbox" name="flowers" value="Orchid"> Orchid</label>
-        <label><input type="checkbox" name="flowers" value="Lily"> Lily</label>
-        <button type="submit">Krijo Buqetën</button>
-      </form>
-
-      <!-- Preview i buqetës -->
-      <div id="bouquetPreview" style="margin-top:15px; position:relative; width:500px; height:500px;"></div>
-      <p><strong>Lulet e zgjedhura</strong></p>
-    </aside>
-
-    <!-- PRODUCTS -->
-    <section class="products">
-      <h2 class="section-title">OUR BOUQUETS</h2>
-      <div class="product-grid" id="productGrid">
-        <!-- Shembull produktesh -->
-        
-       <div class="product-card">
-        <img src="picsForBouquets/Daffodil.jpg" alt="Daffodil">
-        <h3>Daffodil</h3>
-        <span class="price">$29.99</span>
-        <a href="#" class="add-btn">Add to Cart</a>
-      </div>
-
-      <div class="product-card">
-        <img src="picsForBouquets/tulip.jpg" alt="Spring Tulips">
-        <h3>Spring Tulips</h3>
-        <span class="price">$24.99</span>
-        <a href="#" class="add-btn">Add to Cart</a>
-      </div>
-
-      <div class="product-card">
-        <img src="picsForBouquets/Dahlia.jpg" alt="Dahlia">
-        <h3>Dahlia</h3>
-        <span class="price">$22.99</span>
-        <a href="#" class="add-btn">Add to Cart</a>
-      </div>
-
-      <div class="product-card">
-        <img src="picsForBouquets/daisy.jpg" alt="Daisy">
-        <h3>Daisy</h3>
-        <span class="price">$87.99</span>
-        <a href="#" class="add-btn">Add to Cart</a>
-      </div>
-
-      <div class="product-card">
-        <img src="picsForBouquets/Dandelion.jpg" alt="Dandelion">
-        <h3>Dandelion</h3>
-        <span class="price">$78.99</span>
-        <a href="#" class="add-btn">Add to Cart</a>
-      </div>
-
-      <div class="product-card">
-        <img src="picsForBouquets/Forget-Me-Not.jpg" alt="DontForgetMeNot">
-        <h3>DontForgetMeNot</h3>
-        <span class="price">$23.99</span>
-        <a href="#" class="add-btn">Add to Cart</a>
-      </div>
-
-      <div class="product-card">
-        <img src="picsForBouquets/Freesia.jpg" alt="Freesia">
-        <h3>Freesia</h3>
-        <span class="price">$45.99</span>
-        <a href="#" class="add-btn">Add to Cart</a>
-      </div>
-
-      <div class="product-card">
-        <img src="picsForBouquets/Gardenia.jpg" alt="Gardenia">
-        <h3>Gardenia</h3>
-        <span class="price">$33.99</span>
-        <a href="#" class="add-btn">Add to Cart</a>
-      </div>
-
-      <div class="product-card">
-        <img src="picsForBouquets/Hibiscus.jpg" alt="Hibiscus">
-        <h3>Hibiscus</h3>
-        <span class="price">$30.99</span>
-        <a href="#" class="add-btn">Add to Cart</a>
-      </div>
-
-      <div class="product-card">
-        <img src="picsForBouquets/Hyacinth.jpg" alt="Hyacinth">
-        <h3>Hyacinth</h3>
-        <span class="price">$10.99</span>
-        <a href="#" class="add-btn">Add to Cart</a>
-      </div>
-
-      <div class="product-card">
-        <img src="picsForBouquets/hydrangea.jpg" alt="Hydrangea">
-        <h3>Hydrangea</h3>
-        <span class="price">$10.99</span>
-        <a href="#" class="add-btn">Add to Cart</a>
-      </div>
-
-      <div class="product-card">
-        <img src="picsForBouquets/jasmine.jpg" alt="Jasmine">
-        <h3>Jasmine</h3>
-        <span class="price">$10.99</span>
-        <a href="#" class="add-btn">Add to Cart</a>
-      </div>
-
-      <div class="product-card">
-        <img src="picsForBouquets/lavender.jpg" alt="Lavender">
-        <h3>Lavender</h3>
-        <span class="price">$20.99</span>
-        <a href="#" class="add-btn">Add to Cart</a>
-      </div>
-
-      <div class="product-card">
-        <img src="picsForBouquets/lily.jpg" alt="Lily">
-        <h3>Lily</h3>
-        <span class="price">$110.99</span>
-        <a href="#" class="add-btn">Add to Cart</a>
-      </div>
-
-      <div class="product-card">
-        <img src="picsForBouquets/magnolia.jpg" alt="Magnolia">
-        <h3>Magnolia</h3>
-        <span class="price">$145.99</span>
-        <a href="#" class="add-btn">Add to Cart</a>
-      </div>
-
-      <div class="product-card">
-        <img src="picsForBouquets/orchid.jpg" alt="Orchid">
-        <h3>Orchid</h3>
-        <span class="price">$118.99</span>
-        <a href="#" class="add-btn">Add to Cart</a>
-      </div>
-
-      <div class="product-card">
-        <img src="picsForBouquets/Poppy.jpg" alt="Poppy">
-        <h3>Poppy</h3>
-        <span class="price">$56.99</span>
-        <a href="#" class="add-btn">Add to Cart</a>
-      </div>
-
-      <div class="product-card">
-        <img src="picsForBouquets/Ranunculus.jpg" alt="Ranunculus">
-        <h3>Ranunculus</h3>
-        <span class="price">$90.99</span>
-        <a href="#" class="add-btn">Add to Cart</a>
-      </div>
-
-      <div class="product-card">
-        <img src="picsForBouquets/Red Roses.jpg" alt="Red Roses">
-        <h3>Red Roses</h3>
-        <span class="price">$140.99</span>
-        <a href="#" class="add-btn">Add to Cart</a>
-      </div>
-
-      <div class="product-card">
-        <img src="picsForBouquets/Spider Liliy.jpg" alt="Spider Lily">
-        <h3>Spider Lily</h3>
-        <span class="price">$47.99</span>
-        <a href="#" class="add-btn">Add to Cart</a>
-      </div>
-
-      <div class="product-card">
-        <img src="picsForBouquets/sunflower.jpg" alt="Sun Flower">
-        <h3>Sun Flower</h3>
-        <span class="price">$40.99</span>
-        <a href="#" class="add-btn">Add to Cart</a>
-      </div>
-
-      <div class="product-card">
-        <img src="pic/bluepeony.jpg" alt="Blue Peony">
-        <h3>Blue Peony</h3>
-        <span class="price">$37.99</span>
-        <a href="#Contact" class="add-btn">Add to Cart</a>
-      </div>
-
-      <div class="product-card">
-        <img src="pic/pinkroses.jpg" alt="pink roses">
-        <h3>Pink Roses</h3>
-        <span class="price">$29.99</span>
-        <a href="#Contact" class="add-btn">Add to Cart</a>
-      </div>
-
-      <div class="product-card">
-        <img src="pic/redorchid.jpg" alt="Red Orchid">
-        <h3>Red Orchid</h3>
-        <span class="price">$40.99</span>
-        <a href="#Contact" class="add-btn">Add to Cart</a>
-      </div>
-
-    </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- JS -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const priceRange = document.getElementById('priceRange');
-      const maxPriceLabel = document.getElementById('maxPriceLabel');
-      const applyBtn = document.getElementById('applyPriceFilter');
-      const products = Array.from(document.querySelectorAll('.product-card'));
-      const flowerForm = document.getElementById('flowerFilterForm');
-
-      maxPriceLabel.textContent = '$' + priceRange.value;
-
-      priceRange.addEventListener('input', () => {
-        maxPriceLabel.textContent = '$' + priceRange.value;
-      });
-
-      applyBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const maxPrice = parseFloat(priceRange.value);
-        products.forEach(product => {
-          const priceEl = product.querySelector('.price');
-          if (!priceEl) return;
-          const price = parseFloat(priceEl.textContent.replace('$',''));
-          product.style.display = price <= maxPrice ? '' : 'none';
-        });
-      });
-
-      // BUQETA
-      flowerForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        const checkedFlowers = Array.from(flowerForm.querySelectorAll('input[name="flowers"]:checked'))
-          .map(input => input.value);
-
-        const bouquetPreview = document.getElementById('bouquetPreview');
-        bouquetPreview.innerHTML = ''; // pastro preview
-
-        if (checkedFlowers.length === 0) {
-          bouquetPreview.innerHTML = '<p>Zgjidh lule për të krijuar buqetën tënde!</p>';
-          return;
-        }
-
-        checkedFlowers.forEach((flower, index) => {
-          const img = document.createElement('img');
-
-          // Vendos imazhin sipas lule
-          if (flower === 'Roses') {
-            img.src = 'picsForBouquets/onerose-removebg-preview.png';
-          } else if (flower === 'Tulip') {
-            img.src = 'picsForBouquets/onetulip-removebg-preview.png';
-          } else if (flower === 'Orchid') {
-            img.src = 'picsForBouquets/oneorchid-removebg-preview.png';
-          } else if (flower === 'Lily') {
-            img.src = 'picsForBouquets/onelily-removebg-preview.png';
-          }
-
-          img.alt = flower;
-          img.style.width = '150px';
-          img.style.height = '150px';
-          img.style.objectFit = 'contain';
-          img.style.position = 'absolute';
-
-          // Pozicion i rastësishëm për efekt buqetë
-          const randomX = Math.floor(Math.random() * 200) + 150;
-          const randomY = Math.floor(Math.random() * 200) + 150;
-          const randomRotate = Math.floor(Math.random() * 40) - 20;
-
-          img.style.left = `${randomX}px`;
-          img.style.top = `${randomY}px`;
-          img.style.transform = `rotate(${randomRotate}deg)`;
-          img.style.zIndex = index + 1;
-
-          bouquetPreview.appendChild(img);
-        });
-      });
-
-      // Reveal animation
-      const io = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if(entry.isIntersecting){
-            entry.target.classList.add('revealed');
-            io.unobserve(entry.target);
-          }
-        });
-      }, {threshold:0.12});
-      products.forEach(card => io.observe(card));
-
-      // Hero slideshow
-      let heroIndex = 0;
-      const heroSlides = document.querySelectorAll(".hero-slide");
-      function showNextHeroSlide(){
-        heroSlides.forEach(slide => slide.classList.remove("active"));
-        heroSlides[heroIndex].classList.add("active");
-        heroIndex = (heroIndex + 1) % heroSlides.length;
-      }
-      showNextHeroSlide();
-      setInterval(showNextHeroSlide, 3500);
-
-    });
-  </script>
-
+<footer class="footer">
+  <p>&copy; 2025 Bouquets Shop. All rights reserved.</p>
+</footer>
+<script src="../js/bouquets.js"></script>
 </body>
 </html>
